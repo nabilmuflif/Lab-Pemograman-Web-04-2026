@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binpor Creative Competition | Rayakan Ide, Ciptakan Karya</title>
+
+  <!-- Tailwind CSS melalui CDN. Seluruh styling menggunakan utility class Tailwind. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-950 text-stone-100 antialiased">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 border-b border-white/10 bg-stone-950/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
+      <a href="#beranda" class="flex items-center gap-3" aria-label="Binpor Creative Competition - Beranda">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-500 text-lg font-black text-stone-950">B</span>
+        <span class="text-sm font-extrabold tracking-wide sm:text-base">BINPOR<span class="text-red-500">CREATIVE</span></span>
+      </a>
+
+      <div class="hidden items-center gap-8 text-sm font-medium text-stone-300 md:flex">
+        <a href="#beranda" class="transition hover:text-red-500">Beranda</a>
+        <a href="#tentang" class="transition hover:text-red-500">Tentang</a>
+        <a href="#pengalaman" class="transition hover:text-red-500">Mata Lomba</a>
+        <a href="#testimoni" class="transition hover:text-red-500">Testimoni</a>
+      </div>
+
+      <a href="#daftar" class="rounded-full bg-red-500 px-4 py-2.5 text-sm font-bold text-stone-950 transition hover:bg-red-400 sm:px-5">
+        Ikut Lomba <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HEADER + HERO -->
+  <header id="beranda" class="relative isolate overflow-hidden">
+    <div class="absolute inset-0 -z-20">
+      <img
+        src="1.JPG"
+        alt=""
+        class="h-full w-full object-cover opacity-50">
+    </div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-stone-950 via-stone-950/85 to-stone-950/35"></div>
+
+    <div class="mx-auto grid min-h-[650px] max-w-7xl items-center gap-12 px-5 py-20 sm:px-8 lg:grid-cols-2 lg:py-28">
+      <div>
+        <p class="mb-6 inline-flex items-center gap-2 rounded-full border border-red-800/30 bg-red-500/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.2em] text-red-500 sm:text-sm">
+          <span class="h-2 w-2 rounded-full bg-red-500"></span>
+          Lomba Kreativitas & Budaya
+        </p>
+        <h1 class="max-w-3xl text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
+          Ide besar.<br>
+          <span class="text-red-500">Energi tanpa batas.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-base leading-8 text-stone-300 sm:text-lg">
+          Binpor Creative Competition adalah ruang bertemunya Sekolah, Pembina, Pelatih, dan Penggalang untuk mengevaluasi hasil latihan yang ada di gugus depan.
+        </p>
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a href="#daftar" class="inline-flex items-center justify-center gap-2 rounded-full bg-red-500 px-7 py-4 font-bold text-stone-950 transition hover:-translate-y-1 hover:bg-red-300">
+            Daftar Sekarang <span aria-hidden="true">↗</span>
+          </a>
+          <a href="#tentang" class="inline-flex items-center justify-center rounded-full border border-white/25 px-7 py-4 font-semibold text-white transition hover:border-lime-300 hover:text-lime-300">
+            Kenali Lomba
+          </a>
+        </div>
+
+        <div class="mt-12 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/15 pt-7">
+          <div>
+            <p class="text-2xl font-black text-white">6 Sekolah</p>
+            <p class="mt-1 text-sm text-stone-400">Terbatas</p>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-white">3 Hari</p>
+            <p class="mt-1 text-sm text-stone-400">Penuh Tantangan</p>
+          </div>
+          <div>
+            <p class="text-2xl font-black text-white">1 Ruang</p>
+            <p class="mt-1 text-sm text-stone-400">Banyak kemungkinan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative mx-auto w-full max-w-lg">
+        <div class="absolute -right-4 -top-4 h-28 w-28 rounded-full border border-lime-300/50"></div>
+        <img
+          src="2.JPG"
+          alt="Pioneering Menara Kaki 4"
+          class="relative h-[380px] w-full rounded-[2rem] object-cover shadow-2xl shadow-black/40 sm:h-[480px]">
+        <div class="absolute -bottom-6 -left-3 max-w-xs rounded-2xl border border-white/10 bg-stone-900/95 p-5 shadow-xl sm:-left-8">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-red-500">Save the date</p>
+          <p class="mt-2 text-xl font-extrabold">29–31 Desember 2027</p>
+          <p class="mt-1 text-sm text-stone-400">UPT SPF SMPN 33 MAKASSAR</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <main>
+    <section id="tentang" class="mx-auto max-w-7xl px-5 py-24 sm:px-8 lg:py-32">
+      <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-red-500">Tentang Lomba</p>
+          <h2 class="mt-4 max-w-xl text-3xl font-black leading-tight sm:text-5xl">
+            Merayakan kreativitas yang tumbuh dari sekitar kita.
+          </h2>
+        </div>
+        <div>
+          <p class="text-lg leading-8 text-stone-300">
+            Kami percaya ide hebat bisa lahir dari mana saja. Lomba ini menghadirkan ruang untuk berbagi pengalaman, memamerkan kemampuan, bertukar keterampilan, dan membangun mental juara.
+          </p>
+          <p class="mt-5 leading-7 text-stone-400">
+            Dari tali, tongkat, agama hingga seni, setiap sudut lomba dirancang untuk membuka peluang dan mempertemukan sekolah yang punya semangat berkarya.
+          </p>
+          <a href="#pengalaman" class="mt-7 inline-flex items-center gap-2 font-bold text-red-500 transition hover:gap-4">
+            Jelajahi Lomba <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES / GRID -->
+    <section id="pengalaman" class="bg-stone-900 py-24 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[0.22em] text-red-500">Ada Lomba apa saja ?</p>
+            <h2 class="mt-4 text-3xl font-black sm:text-5xl">Berikan semua yang kamu punya!</h2>
+          </div>
+          <p class="max-w-md leading-7 text-stone-400">Datang untuk satu hal, pulang dengan banyak cerita. Pilih pengalamanmu dan biarkan rasa ingin tahu membawamu.</p>
+        </div>
+
+        <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">♫</div>
+            <h3 class="mt-6 text-xl font-extrabold">Perkusi Kenegaraan</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Perkusi dengan mengambil nada-nda khas dari suatu negara pilihan.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">4 PA & 4 PI (Gabungan) ↗</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">✳</div>
+            <h3 class="mt-6 text-xl font-extrabold">Vocal Group Daerah</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Vocal group dengan nuansa lagu daerah indonesia.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">4 PA & 4 PI (Gabungan) ↗</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">✎</div>
+            <h3 class="mt-6 text-xl font-extrabold">Sandi, Morse, Semaphore</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Ikuti sesi berbagi dan lokakarya untuk mengembangkan kemampuan baru.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">3 PA & 3 PI (Satuan Terpisah) ↗</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">⌂</div>
+            <h3 class="mt-6 text-xl font-extrabold">Miniatur Bangunan Standart</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Kemampuan tali temali dalam skala kecil akan di adu disini.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">3 Pa & 3 PI (Satuan Terpisah) ↗</p>
+          </article>
+          
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">✎</div>
+            <h3 class="mt-6 text-xl font-extrabold">Adzan</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Ikuti sesi berbagi dan lokakarya untuk mengembangkan kemampuan baru.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">1 PA↗</p>
+          </article>
+          
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">✎</div>
+            <h3 class="mt-6 text-xl font-extrabold">Sambung Ayat</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Ikuti sesi berbagi dan lokakarya untuk mengembangkan kemampuan baru.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">1 PI↗</p>
+          </article>
+          
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">✎</div>
+            <h3 class="mt-6 text-xl font-extrabold">KIM</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Ikuti sesi berbagi dan lokakarya untuk mengembangkan kemampuan baru.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">1 PA & 1 PI (Satuan Terpisah)↗</p>
+          </article>
+          
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">⌂</div>
+            <h3 class="mt-6 text-xl font-extrabold">Pioneering Menara Kaki 4</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Kemampuan tali temali dalam skala kecil akan di adu disini.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">2 Pa & 2 PI (Satuan Terpisah) ↗</p>
+          </article>
+          
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">⌂</div>
+            <h3 class="mt-6 text-xl font-extrabold">Pioneering Menara Kaki 3 Pyramid</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Kemampuan tali temali dalam skala kecil akan di adu disini.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">1 Pa & 1 PI (Satuan Terpisah) ↗</p>
+          </article>
+
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">⌂</div>
+            <h3 class="mt-6 text-xl font-extrabold">Pioneering Menara Kaki 3</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Kemampuan tali temali dalam skala kecil akan di adu disini.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">1 Pa & 1 PI (Satuan Terpisah) ↗</p>
+          </article>
+          
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">⌂</div>
+            <h3 class="mt-6 text-xl font-extrabold">Pioneering Tandu</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Kemampuan tali temali dalam skala kecil akan di adu disini.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">2 Pa & 2 PI (Satuan Terpisah) ↗</p>
+          </article>
+          
+          <article class="group rounded-3xl border border-white/10 bg-stone-950 p-6 transition duration-300 hover:-translate-y-2 hover:border-lime-300/50">
+            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-red-500 text-2xl text-stone-950">⌂</div>
+            <h3 class="mt-6 text-xl font-extrabold">Pioneering Tiang Bendera</h3>
+            <p class="mt-3 text-sm leading-6 text-stone-400">Kemampuan tali temali dalam skala kecil akan di adu disini.</p>
+            <p class="mt-6 text-sm font-bold text-red-500">2 Pa & 2 PI (Satuan Terpisah) ↗</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT -->
+    <section class="mx-auto grid max-w-7xl gap-10 px-5 py-24 sm:px-8 lg:grid-cols-2 lg:items-center lg:py-32">
+      <div class="overflow-hidden rounded-[2rem]">
+        <img
+          src="3.JPG"
+          alt="Panggung pertunjukan dengan cahaya dan penonton"
+          class="h-[320px] w-full object-cover sm:h-[440px]">
+      </div>
+      <div>
+        <p class="text-sm font-bold uppercase tracking-[0.22em] text-red-500">Bukan sekadar lomba</p>
+        <h2 class="mt-4 text-3xl font-black leading-tight sm:text-5xl">Satu tempat. Banyak perspektif. Energi baru.</h2>
+        <p class="mt-6 leading-8 text-stone-300">
+          Bertemu orang baru, berbagi ide, dan menemukan inspirasi yang mungkin selama ini kamu cari. Binpor Creative Competition dibuat untuk siapa pun yang ingin menikmati dan mendukung ekosistem kreatif.
+        </p>
+        <ul class="mt-7 space-y-3 text-stone-300">
+          <li class="flex gap-3"><span class="font-black text-red-500">✓</span> Ruang bertemu komunitas kreatif</li>
+          <li class="flex gap-3"><span class="font-black text-red-500">✓</span> Pengalaman seni dan hiburan dalam satu acara</li>
+          <li class="flex gap-3"><span class="font-black text-red-500">✓</span> Kesempatan mengenal karya lokal</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section id="testimoni" class="border-y border-white/10 bg-stone-900 py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-red-500">Cerita pengunjung</p>
+          <h2 class="mt-4 text-3xl font-black sm:text-5xl">Pengalaman yang dibawa pulang.</h2>
+        </div>
+
+        <div class="mt-12 grid gap-5 md:grid-cols-3">
+          <figure class="rounded-3xl border border-white/10 bg-stone-950 p-7">
+            <div class="text-xl tracking-widest text-red-500" aria-label="5 dari 5 bintang">★★★★★</div>
+            <blockquote class="mt-5 leading-7 text-stone-300">“Suka banget karena bisa lihat karya kreator lokal sekaligus kenalan dengan orang-orang baru yang punya minat sama.”</blockquote>
+            <figcaption class="mt-6 border-t border-white/10 pt-5">
+              <p class="font-bold">Reynaldy Rizal</p>
+              <p class="mt-1 text-sm text-stone-500">Pengunjung Lomba</p>
+            </figcaption>
+          </figure>
+
+          <figure class="rounded-3xl border border-white/10 bg-stone-950 p-7">
+            <div class="text-xl tracking-widest text-red-500" aria-label="5 dari 5 bintang">★★★★★</div>
+            <blockquote class="mt-5 leading-7 text-stone-300">“Suasananya menyenangkan dan banyak hal baru yang bisa dipelajari. Pulang-pulang jadi punya banyak ide.”</blockquote>
+            <figcaption class="mt-6 border-t border-white/10 pt-5">
+              <p class="font-bold">Muh. Zaubil Haqqi Ma'ruf</p>
+              <p class="mt-1 text-sm text-stone-500">Pengunjung Lomba</p>
+            </figcaption>
+          </figure>
+
+          <figure class="rounded-3xl border border-white/10 bg-stone-950 p-7">
+            <div class="text-xl tracking-widest text-red-500" aria-label="5 dari 5 bintang">★★★★★</div>
+            <blockquote class="mt-5 leading-7 text-stone-300">“Senang melihat produk lokal mendapat ruang untuk dikenal lebih luas. Semoga acaranya terus berkembang.”</blockquote>
+            <figcaption class="mt-6 border-t border-white/10 pt-5">
+              <p class="font-bold">Muh. Faiz</p>
+              <p class="mt-1 text-sm text-stone-500">Peserta Binpor Creative Competition</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / REGISTRATION -->
+    <section id="daftar" class="mx-auto max-w-4xl px-5 py-24 sm:px-8 lg:py-32">
+      <div class="rounded-[2rem] border border-red-800/50 bg-gradient-to-br from-red-500/10 to-stone-900 p-6 sm:p-10 lg:p-14">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="text-sm font-bold uppercase tracking-[0.22em] text-red-500">Jadi bagian dari cerita</p>
+          <h2 class="mt-4 text-3xl font-black sm:text-5xl">Kreativitas dimulai dari satu langkah.</h2>
+          <p class="mt-5 leading-7 text-stone-300">Isi formulir berikut untuk menunjukkan minat dan mendapatkan informasi lomba.</p>
+        </div>
+
+        <form action="#" method="post" class="mx-auto mt-10 max-w-xl space-y-5">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="nama" class="mb-2 block text-sm font-semibold text-stone-200">Nama lengkap</label>
+              <input id="nama" name="nama" type="text" placeholder="Nama kamu"
+                class="w-full rounded-xl border border-white/15 bg-stone-950/80 px-4 py-3 text-white outline-none transition placeholder:text-stone-600 focus:border-lime-300">
+            </div>
+            <div>
+              <label for="email" class="mb-2 block text-sm font-semibold text-stone-200">Alamat email</label>
+              <input id="email" name="email" type="email" placeholder="nama@email.com"
+                class="w-full rounded-xl border border-white/15 bg-stone-950/80 px-4 py-3 text-white outline-none transition placeholder:text-stone-600 focus:border-lime-300">
+            </div>
+          </div>
+
+          <div>
+            <label for="minat" class="mb-2 block text-sm font-semibold text-stone-200">Asal Daerah</label>
+            <select id="minat" name="minat"
+              class="w-full rounded-xl border border-white/15 bg-stone-950/80 px-4 py-3 text-white outline-none transition focus:border-lime-300">
+              <option value="">Pilih salah satu</option>
+              <option value="kota">Makassar</option>
+              <option value="kota2">Gowa</option>
+              <option value="kota3">Pangkep</option>
+              <option value="kota4">Jene'ponto</option>
+              <option value="kota5">Bulukumba</option>
+              <option value="kota6">Maros</option>
+              <option value="kota7">Sinjai</option>
+              <option value="kota8">Pinrang</option>
+              <option value="kota9">Enrekang</option>
+              <option value="kota10">Sengkang</option>
+              <option value="kota11">Soppeng</option>
+              <option value="kota12">Barru</option>
+              <option value="kota13">Luwu Utara</option>
+              <option value="kota14">Luwu Timur</option>
+              <option value="kota15">Palopo</option>
+              <option value="kota16">Toraja</option>
+              <option value="kota17">Selayar</option>
+              <option value="kota18">Pare-Pare</option>
+              <option value="kota19">Wajo</option>
+            </select>
+          </div>
+
+          <label class="flex items-start gap-3 text-sm leading-6 text-stone-400">
+            <input type="checkbox" name="persetujuan" class="mt-1 h-4 w-4 accent-lime-300">
+            Saya bersedia menerima informasi terbaru mengenai festival.
+          </label>
+
+          <button type="button" class="w-full rounded-full bg-red-500 px-6 py-4 font-extrabold text-stone-950 transition hover:bg-red-400 sm:w-auto">
+            Kirim Minat <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-stone-950">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-2">
+        <a href="#beranda" class="inline-flex items-center gap-3">
+          <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-red-500 text-lg font-black text-stone-950">B</span>
+          <span class="font-extrabold tracking-wide">BINPOR<span class="text-red-500">CREATIVE</span></span>
+        </a>
+        <p class="mt-4 max-w-md text-sm leading-7 text-stone-400">Ruang bertemunya ide, budaya, dan kreativitas lokal. Mari tumbuh bersama melalui karya dan kolaborasi.</p>
+      </div>
+
+      <div>
+        <h2 class="font-bold text-white">Jelajahi</h2>
+        <ul class="mt-4 space-y-3 text-sm text-stone-400">
+          <li><a href="#tentang" class="transition hover:text-red-500">Tentang festival</a></li>
+          <li><a href="#pengalaman" class="transition hover:text-red-500">Pengalaman</a></li>
+          <li><a href="#testimoni" class="transition hover:text-red-500">Testimoni</a></li>
+          <li><a href="#daftar" class="transition hover:text-red-500">Pendaftaran</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-bold text-white">Kontak</h2>
+        <ul class="mt-4 space-y-3 text-sm text-stone-400">
+          <li><a href="mailto:halo@nusacreative.example" class="transition hover:text-red-500">BinporCreative@gmail.com</a></li>
+          <li>Makassar, Indonesia</li>
+          <li class="flex gap-4 pt-1">
+            <a href="https://instagram.com/" class="transition hover:text-red-500" target="_blank" rel="noreferrer">Instagram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-xs text-stone-500 sm:px-8 md:flex-row md:items-center md:justify-between">
+        <p>© 2026 BinporCreative. Dibuat Oleh H071221018 untuk tugas praktikum 3.</p>
+        <div class="flex gap-5">
+          <a href="#daftar" class="transition hover:text-red-500">Kebijakan Privasi</a>
+          <a href="#beranda" class="transition hover:text-red-500">Kembali ke atas ↑</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Raja Ampat</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 45px;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            color: #243746;
+            background: #f3f8fa;
+        }
+
+        header {
+            min-height: 330px;
+            padding: 70px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background:
+                linear-gradient(rgba(5, 45, 65, 0.62), rgba(5, 45, 65, 0.68)),
+                url("Main.jpg") center/cover no-repeat,
+                #087e8b;
+        }
+
+        header h1 {
+            margin-bottom: 8px;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 18px;
+            background: #073b4c;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        nav h2 {
+            margin: 0 12px 0 0;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        nav a {
+            padding: 7px 11px;
+            border-radius: 6px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.92rem;
+            transition: background-color 0.25s, transform 0.25s;
+        }
+
+        /* Pseudo-class */
+        nav a:hover {
+            background: #06a6a6;
+            transform: translateY(-2px);
+        }
+
+        main {
+            width: min(1120px, 92%);
+            margin: 30px auto;
+        }
+
+        /* ID selector */
+        section {
+            margin-bottom: 26px;
+            padding: 30px;
+            border: 1px solid #dce8ec;
+            border-radius: 16px;
+            background: #ffffff;
+            box-shadow: 0 5px 18px rgba(7, 59, 76, 0.06);
+        }
+
+        section h2 {
+            margin-bottom: 18px;
+            color: #087e8b;
+            font-size: 1.7rem;
+        }
+
+        section h3 {
+            margin: 18px 0 8px;
+            color: #07566b;
+        }
+
+        section p {
+            margin-bottom: 14px;
+        }
+
+        #beranda {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 28px;
+        }
+
+        #beranda h2 {
+            grid-column: 1 / -1;
+            margin-bottom: 0;
+        }
+
+        #beranda img {
+            grid-column: 2;
+            grid-row: 2 / span 2;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        #beranda img {
+            width: 100%;
+            max-height: 360px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(7, 59, 76, 0.15);
+        }
+
+        /* Class selector */
+        .highlight {
+            padding: 16px 18px;
+            border-left: 4px solid #06a6a6;
+            border-radius: 0 8px 8px 0;
+            background: #eaf8f8;
+        }
+
+        #aktivitas ol {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            padding-left: 25px;
+        }
+
+        #aktivitas li {
+            padding: 16px 18px;
+            border: 1px solid #dce8ec;
+            border-radius: 10px;
+            background: #f8fcfd;
+        }
+
+        #aktivitas li p {
+            margin: 6px 0 0;
+        }
+
+        #galeri .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        figure {
+            overflow: hidden;
+            border: 1px solid #dce8ec;
+            border-radius: 12px;
+            background: #ffffff;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 22px rgba(7, 59, 76, 0.13);
+        }
+
+        figure img {
+            width: 100%;
+            height: 175px;
+            object-fit: cover;
+            border-radius: 0;
+        }
+
+        figcaption {
+            padding: 12px;
+            text-align: center;
+            font-size: 0.92rem;
+        }
+
+        .location-details {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px 20px;
+            margin: 16px 0;
+        }
+
+        .location-details p {
+            margin: 0;
+            padding: 12px;
+            border: 1px solid #dce8ec;
+            border-radius: 8px;
+            background: #f8fcfd;
+        }
+
+        iframe,
+        video {
+            display: block;
+            width: 100%;
+            max-width: 100%;
+            border: 0;
+            border-radius: 12px;
+        }
+
+        iframe {
+            min-height: 350px;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+        }
+
+        th, td {
+            padding: 13px 15px;
+            border: 1px solid #d5e3e8;
+            text-align: left;
+        }
+
+        th {
+            color: #ffffff;
+            background: #087e8b;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f0f8fa;
+        }
+
+        tbody tr:hover {
+            background: #e0f4f4;
+        }
+
+        #multimedia .media-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        audio {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        fieldset {
+            padding: 22px;
+            border: 1px solid #c9dce2;
+            border-radius: 12px;
+        }
+
+        legend {
+            padding: 0 8px;
+            color: #07566b;
+            font-weight: 700;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1px solid #bdcfd6;
+            border-radius: 7px;
+            background: #ffffff;
+            color: #243746;
+            font: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #06a6a6;
+            border-color: #06a6a6;
+        }
+
+        .radio-options, .checkbox-option, .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .radio-options label, .checkbox-option label {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .radio-options input, .checkbox-option input {
+            width: auto;
+        }
+
+        .form-actions {
+            margin-top: 18px;
+        }
+
+        button, input[type="submit"], input[type="reset"] {
+            width: auto;
+            padding: 11px 20px;
+            border: none;
+            border-radius: 7px;
+            color: #ffffff;
+            background: #087e8b;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        input[type="reset"] {
+            background: #647985;
+        }
+
+        button:hover, input[type="submit"]:hover, input[type="reset"]:hover {
+            background: #064c5b;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            padding: 32px 20px;
+            text-align: center;
+            color: #eaf8f8;
+            background: #073b4c;
+        }
+
+        footer h2 {
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        footer p {
+            margin: 6px 0;
+        }
+
+        footer a {
+            display: inline-block;
+            margin: 8px 0;
+            color: #7fe7e7;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        /* Responsive design: tablet */
+        @media (max-width: 800px) {
+            #galeri .gallery-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            #beranda {
+                grid-template-columns: 1fr;
+            }
+
+            #beranda h2, #beranda img {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            #aktivitas ol {
+                grid-template-columns: 1fr;
+            }
+
+            #multimedia .media-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Responsive design: ponsel */
+        @media (max-width: 520px) {
+            header {
+                min-height: 260px;
+                padding: 45px 16px;
+            }
+
+            nav {
+                position: static;
+                gap: 5px;
+                padding: 12px 8px;
+            }
+
+            nav h2 {
+                width: 100%;
+                margin: 0 0 5px;
+                text-align: center;
+            }
+
+            nav a {
+                padding: 6px 8px;
+                font-size: 0.82rem;
+            }
+
+            main {
+                width: 94%;
+                margin: 18px auto;
+            }
+
+            section {
+                padding: 20px 16px;
+                margin-bottom: 18px;
+            }
+
+            section h2 {
+                font-size: 1.4rem;
+            }
+
+            #galeri .gallery-grid,
+            .location-details,
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full-width {
+                grid-column: auto;
+            }
+
+            iframe {
+                min-height: 280px;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>🌊 WISATA RAJA AMPAT</h1>
+        <p>Kepulauan Raja Ampat, Papua Barat Daya</p>
+    </header>
+
+    <nav aria-label="Navigasi utama">
+        <h2>Navigasi</h2>
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#aktivitas">Aktivitas</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#informasi">Informasi</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#formulir">Formulir</a>
+    </nav>
+
+    <main>
+        <section id="beranda">
+            <h2>Selamat Datang di Raja Ampat</h2>
+            <p>
+                Raja Ampat merupakan salah satu destinasi wisata bahari yang terkenal
+                di Indonesia. Raja Ampat berada di Provinsi Papua Barat Daya dan
+                memiliki keindahan alam berupa pulau, pantai, serta ekosistem bawah laut.
+            </p>
+            <img src="Main.jpg" alt="Pemandangan laut dan pulau di Raja Ampat">
+            <p class="highlight">
+                Raja Ampat cocok bagi wisatawan yang ingin menikmati keindahan alam,
+                melakukan aktivitas di laut, maupun mengenal kehidupan masyarakat setempat.
+            </p>
+        </section>
+
+        <section id="tentang">
+            <h2>Tentang Raja Ampat</h2>
+            <h3>Keindahan Alam</h3>
+            <p>
+                Kepulauan Raja Ampat memiliki banyak pulau dengan pemandangan laut yang
+                indah. Kawasan ini juga dikenal sebagai salah satu kawasan dengan
+                kekayaan hayati laut yang tinggi.
+            </p>
+            <h3>Pesona Wisata</h3>
+            <p>
+                Wisatawan dapat menikmati pemandangan pulau-pulau, melakukan snorkeling
+                dan menyelam, menjelajahi pulau, serta menikmati panorama alam dari berbagai titik.
+            </p>
+        </section>
+
+        <section id="aktivitas">
+            <h2>Daftar Aktivitas Wisata</h2>
+            <ol>
+                <li><strong>Snorkeling</strong><p>Melihat keindahan terumbu karang dan kehidupan laut dari permukaan air.</p></li>
+                <li><strong>Diving</strong><p>Menjelajahi keindahan ekosistem bawah laut Raja Ampat.</p></li>
+                <li><strong>Island Hopping</strong><p>Mengunjungi berbagai pulau menggunakan perahu.</p></li>
+                <li><strong>Trekking</strong><p>Menjelajahi kawasan daratan dan menikmati pemandangan dari tempat yang lebih tinggi.</p></li>
+                <li><strong>Fotografi</strong><p>Mengabadikan pemandangan pulau, laut, pantai, dan matahari terbenam.</p></li>
+                <li><strong>Menikmati Sunset</strong><p>Menikmati pemandangan matahari terbenam di kawasan pesisir.</p></li>
+            </ol>
+        </section>
+
+        <section id="galeri">
+            <h2>Galeri Foto Raja Ampat</h2>
+            <p>Berikut beberapa foto ilustrasi keindahan alam Raja Ampat:</p>
+            <div class="gallery-grid">
+                <figure>
+                    <img src="Pantai Tropis.jpg" alt="Pantai tropis">
+                    <figcaption>Keindahan pantai tropis</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1540202404-a2f29016b523?auto=format&fit=crop&w=800&q=80" alt="Pulau dan laut">
+                    <figcaption>Pemandangan pulau dan laut</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1505881502353-a1986add3762?auto=format&fit=crop&w=800&q=80" alt="Pemandangan kepulauan">
+                    <figcaption>Pemandangan kepulauan</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80" alt="Pantai dan pegunungan">
+                    <figcaption>Pantai dan pegunungan</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="lokasi">
+            <h2>Informasi Lokasi</h2>
+            <div class="location-details">
+                <p><strong>Nama:</strong> Kepulauan Raja Ampat</p>
+                <p><strong>Provinsi:</strong> Papua Barat Daya</p>
+                <p><strong>Negara:</strong> Indonesia</p>
+                <p><strong>Jenis wisata:</strong> Wisata alam dan wisata bahari</p>
+            </div>
+            <h3>Akses Menuju Raja Ampat</h3>
+            <p>
+                Salah satu akses yang umum digunakan adalah melakukan perjalanan menuju
+                Sorong. Setelah itu perjalanan dapat dilanjutkan menggunakan transportasi
+                laut menuju kawasan Raja Ampat.
+            </p>
+            <h3>Peta Lokasi</h3>
+            <iframe
+                src="https://www.google.com/maps?q=Raja+Ampat+Indonesia&output=embed"
+                title="Peta Raja Ampat"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <section id="informasi">
+            <h2>Tabel Informasi Wisata</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr><th>Informasi</th><th>Keterangan</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Nama Destinasi</td><td>Raja Ampat</td></tr>
+                        <tr><td>Provinsi</td><td>Papua Barat Daya</td></tr>
+                        <tr><td>Negara</td><td>Indonesia</td></tr>
+                        <tr><td>Jenis Wisata</td><td>Wisata Alam dan Bahari</td></tr>
+                        <tr><td>Aktivitas</td><td>Snorkeling, Diving, Trekking, Island Hopping, Fotografi</td></tr>
+                        <tr><td>Akses</td><td>Pesawat dan transportasi laut</td></tr>
+                        <tr><td>Bahasa</td><td>Bahasa Indonesia dan bahasa daerah</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="multimedia">
+            <h2>Multimedia</h2>
+            <div class="media-grid">
+                <div>
+                    <h3>Video Wisata</h3>
+                    <video controls poster="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung video HTML.
+                    </video>
+                    <p>Contoh video multimedia yang dapat digunakan untuk memperkenalkan destinasi wisata.</p>
+                </div>
+                <div>
+                    <h3>Audio</h3>
+                    <audio controls>
+                        <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+                        Browser Anda tidak mendukung audio HTML.
+                    </audio>
+                    <p>Contoh elemen audio pada halaman website.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formulir">
+            <h2>Formulir Informasi Wisatawan</h2>
+            <p>Silakan isi formulir berikut jika ingin memberikan pertanyaan atau informasi mengenai rencana kunjungan.</p>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Data Wisatawan</legend>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap:</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telepon">Nomor Telepon:</label>
+                            <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal">Rencana Kunjungan:</label>
+                            <input type="date" id="tanggal" name="tanggal">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="aktivitas-pilihan">Aktivitas yang Diminati:</label>
+                            <select id="aktivitas-pilihan" name="aktivitas">
+                                <option value="">-- Pilih aktivitas --</option>
+                                <option value="snorkeling">Snorkeling</option>
+                                <option value="diving">Diving</option>
+                                <option value="island-hopping">Island Hopping</option>
+                                <option value="trekking">Trekking</option>
+                                <option value="fotografi">Fotografi</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <span>Jenis Wisata:</span>
+                            <div class="radio-options">
+                                <label><input type="radio" id="alam" name="jenis" value="alam"> Wisata Alam</label>
+                                <label><input type="radio" id="bahari" name="jenis" value="bahari"> Wisata Bahari</label>
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="pesan">Pertanyaan / Pesan:</label>
+                            <textarea id="pesan" name="pesan" rows="5" placeholder="Tuliskan pertanyaan Anda..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="persetujuan" name="persetujuan" required>
+                                <label for="persetujuan">Saya menyetujui data yang saya masukkan.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <input type="submit" value="Kirim Formulir">
+                        <input type="reset" value="Reset">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Raja Ampat Tourism</h2>
+        <p>Website informasi wisata Raja Ampat.</p>
+        <p>Jelajahi keindahan alam Indonesia dan tetap jaga kelestarian lingkungan.</p>
+        <p><a href="#beranda">Kembali ke atas</a></p>
+        <p>&copy; 2026 - H071221018</p>
+    </footer>
+</body>
+</html>
